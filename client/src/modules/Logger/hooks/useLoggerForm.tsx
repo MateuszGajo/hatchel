@@ -23,6 +23,8 @@ const useLoggerForm = () => {
   }, [formSuccessMessage]);
 
   const onSubmit = async (data: LogFormData) => {
+    if (formError) setError("");
+
     try {
       setLoading(true);
       await agent.logger.add(data);

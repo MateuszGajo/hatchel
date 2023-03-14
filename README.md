@@ -14,7 +14,7 @@ npm i
 npm run start
 ```
 
-Run api
+Run api\
 BEFORE RUN: create .env and copy content of .env.example
 ```sh
 cd api

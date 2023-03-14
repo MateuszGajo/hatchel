@@ -7,13 +7,15 @@ Application requires [Node.js](https://nodejs.org/) and docker [Docker](https://
 
 Install the dependencies and devDependencies and start the server.
 
+Run client
 ```sh
 cd client
 npm i
 npm run start
 ```
-Client app automtically opens on port 3000
 
+Run api
+BEFORE RUN: create .env and copy content of .env.example
 ```sh
 cd api
 npm i

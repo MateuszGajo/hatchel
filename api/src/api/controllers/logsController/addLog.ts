@@ -46,20 +46,29 @@ export default catchAsync(
  *      summary: Add log
  *      consumes:
  *         - application/json
- *      parameters:
- *        - in: body
- *          name: log
- *          schema:
- *            type: object
- *            required:
- *              - name
- *            properties:
- *              name:
- *                type: string
- *              email:
- *                type: string
- *              log:
- *                type: string
+ *      requestBody:
+ *        required: true
+ *        content:
+ *          application/json:
+ *            name: log
+ *            schema:
+ *              type: object
+ *              required:
+ *                - name
+ *              properties:
+ *                name:
+ *                  type: string
+ *                email:
+ *                  type: string
+ *                logMessage:
+ *                  type: string
  *      tags:
  *        - Logs
+ *      responses:
+ *        "200":
+ *          description: get logs.
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                    $ref: '#/components/schemas/Log'
  */

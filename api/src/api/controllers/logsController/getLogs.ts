@@ -21,7 +21,7 @@ export default catchAsync(
 
 /**
  * @swagger
- * /logs/:
+ * /logs:
  *    get:
  *      summary: Get Logs
  *      parameters:
@@ -41,5 +41,14 @@ export default catchAsync(
  *            type: number
  *          description: Number parameter
  *      tags:
- *        - Logs
+ *        - Log
+ *      responses:
+ *        "200":
+ *          description: get logs.
+ *          content:
+ *              application/json:
+ *                  schema:
+ *                      type: array
+ *                      items:
+ *                        $ref: '#/components/schemas/Log'
  */

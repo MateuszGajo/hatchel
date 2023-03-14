@@ -19,7 +19,7 @@ BEFORE RUN: create .env and copy content of .env.example
 ```sh
 cd api
 npm i
-docker-compose up
+docker-compose up -d
 npm run start
 ```
 
@@ -34,7 +34,7 @@ unit and integration
 cd api
 npm run test
 ```
-E2e
+E2E
 
 ```sh
 cd api
